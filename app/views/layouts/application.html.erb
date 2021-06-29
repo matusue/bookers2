@@ -5,6 +5,7 @@
     <%= csrf_meta_tags %>
     <%= csp_meta_tag %>
     <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+    
 
     <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track': 'reload' %>
     <%= javascript_include_tag 'application', 'data-turbolinks-track': 'reload' %>
@@ -73,12 +74,13 @@
       <% end %>
     </div>
 
-   <%= yield %>
+  <%= yield %>
 
 
     <footer>
       <div class='container'>
         <div class='row'>
+          <div class='col-xs-3 col-xs-offset-9'>
             <p>CopyRight Infratop.inc</p>
           </div>
         </div>

@@ -1,7 +1,9 @@
 <div class="container">
   <div class="row">
-    <div class="col-md-8 col-md-offset-1">
+    <div class="col-md-3">
     　<h1>User info</h1>
+    </div>
+    <div class="col-md-8 col-md-offset-1">
       <%= form_with model:@user do |f| %>
       <%= render 'books/error', model: @user %>
         <div class="user-name">Name</div>
