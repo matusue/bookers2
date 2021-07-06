@@ -13,8 +13,8 @@
  *= require_tree .
  *= require_self
  */
- 
- 
+
+
 
  @import "bootstrap";
  @import 'font-awesome-sprockets';
@@ -26,3 +26,6 @@
   box-sizing: border-box;;
  }
 
+.error {
+ float: left;
+}
