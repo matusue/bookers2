@@ -1,4 +1,4 @@
-<div class="container px-5 px-sm-0">
+<div class="container">
   <div class="row">
     <div class="col-md-3">
       <%= render 'users/user', user: @user %>
@@ -7,15 +7,15 @@
     </div>
     <div class="col-md-8 offset-md-1">
       <h2>Book detail</h2>
-      <table class="table">
+      <table class="table table-user-show">
         <tr>
           <td><%= attachment_image_tag @user, :profile_image, :fill, 20, 20, format: 'jpeg', fallback: "no_image.jpg"%></td>
           <td><%= link_to @user.name, user_path(@user) %></td>
           <td><%= @book.title %></td>
           <td><%= @book.body %></td>
           <% if @book.user_id == current_user.id %>
-            <li><%= link_to "Edit", edit_book_path(@book), class:"btn btn-success"%></li>
-            <li><%= link_to "Destroy", book_path(@book), method: :delete, data: {confirm: "Are you sure？"}, class:"btn btn-danger" %></li>
+            <td><%= link_to "Edit", edit_book_path(@book), class:"btn btn-success"%></td>
+            <td><%= link_to "Destroy", book_path(@book), method: :delete, data: {confirm: "Are you sure？"}, class:"btn btn-danger" %></td>
           <% end %>
         </tr>
       </table>
